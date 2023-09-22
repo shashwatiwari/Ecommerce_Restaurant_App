@@ -35,18 +35,16 @@ function Search() {
         <hr className="my-6"></hr>
         {results.length > 0 ? (
           <div className="grid grid-cols md:grid-cols-2 lg:grid-cols-3 lg:m-5 lg:p-8 gap-6 pt-4 bg-transparent rounded-2xl ">
-          {results.map((item, index) => (
-            <FoodCard key={index} item={item} />
-          ))}
-        </div>
-          
-          
+            {results.map((item, index) => (
+              <FoodCard key={index} item={item} />
+            ))}
+          </div>
         ) : (<p>No result found for <b>"{params.search}" </b> </p>
-          
+
         )}
         <div>
           <div className="flex justify-center items-center mt-5 p-3 ">
-          <Link to="/menu" className="flex justify-center items-center p-2 rounded-lg cursor-pointer hover:bg-orange-100 hover:shadow-sm text-orange-500">
+            <Link to="/menu" className="flex justify-center items-center p-2 rounded-lg cursor-pointer hover:bg-orange-100 hover:shadow-sm text-orange-500">
               <div className="">View All Menu</div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

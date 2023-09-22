@@ -28,7 +28,7 @@ function Menu() {
         </div>
         <hr className="my-6"></hr>
         {/* Menu container*/}
-        <div className="bg-white rounded p-2 lg:p-0">
+        <div className="bg-white rounded p-3 lg:p-0">
           {/* Display foods */}
           <div className="grid grid-cols md:grid-cols-2 lg:grid-cols-3 lg:m-5 lg:p-8 gap-6 bg-transparent rounded-2xl">
             {food.map((item, index) => (

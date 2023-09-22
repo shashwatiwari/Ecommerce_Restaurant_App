@@ -21,6 +21,7 @@ const FoodCard = ({ item }) => {
   const handleFoodClick = () => {
     navigate(`/menu/${item.id}`);
   };
+
   return (
     <div onClick={handleFoodClick} className="cursor-pointer rounded-2xl shadow-orange-200 hover:shadow-2xl hover:scale-105 duration-500 shadow-lg">
       {/* food container */}
@@ -32,7 +33,7 @@ const FoodCard = ({ item }) => {
         />
       </div>
       {/* Details of Food, Price and Cart */}
-      <div className="flex p-2 flex-col gap-2 items-start">
+      <div className="flex p-1 flex-col gap-2 items-start lg:p-3">
         <h2 className="md:text-2xl lg:text-xl font-bold border-b border-b-gray-300">
           {item.name}
         </h2>

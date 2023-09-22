@@ -63,6 +63,9 @@ function Footer() {
                 <li className="py-2 text-sm hover:text-orange-600 cursor-pointer">
                   <Link to="/categories">Categories</Link>
                 </li>
+                <li className="py-2 text-sm hover:text-orange-600 cursor-pointer">
+                  <Link to="/login">Login/SignUp</Link>
+                </li>
               </ul>
             </div>
             <div>
@@ -76,6 +79,9 @@ function Footer() {
                 </li>
                 <li className="py-2 text-sm ">
                   Ts&Cs
+                </li>
+                <li className="py-2 text-sm hover:text-orange-600 cursor-pointer">
+                  <Link to="/contact">Contact Us</Link>
                 </li>
               </ul>
             </div>

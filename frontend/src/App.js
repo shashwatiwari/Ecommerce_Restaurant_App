@@ -10,8 +10,14 @@ import Category from "./scenes/Category";
 import Food from "./scenes/Food";
 import { Route, Routes } from "react-router-dom";
 import { CartProvider } from './CartContext';
+import LoginForm from './user/LoginForm';
+import SignUpForm from './user/SignUpForm';
+import ContactUsForm from "./user/ContactUs";
+import NotFound from "./NotFound";
+import { useNavigate } from "react-router-dom";
 
 function App() {
+  const Navigate = useNavigate();
   return (
     <CartProvider >
       <Navbar />
@@ -25,10 +31,14 @@ function App() {
         <Route path="/categories/:category" element={<Category />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/search/:search" element={<Search />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/signup" element={<SignUpForm />} />
+        <Route path="/contact" element={<ContactUsForm />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </CartProvider>
-    
+
   );
 }
 

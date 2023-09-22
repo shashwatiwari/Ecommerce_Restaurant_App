@@ -1,9 +1,11 @@
 import React, { useState, useContext } from "react";
 import {
   AiFillHome,
+  AiFillMessage,
   AiOutlineMenu,
   AiOutlineSearch,
   AiOutlineClose,
+  AiOutlineLogin
 } from "react-icons/ai";
 import { FaFire, FaShoppingCart } from "react-icons/fa";
 import {
@@ -27,7 +29,7 @@ function Navbar() {
   };
 
   return (
-    <div className="container fixed mx-auto p-4 bg-white top-0 left-0 right-0 z-10">
+    <div className="container fixed mx-auto p-2 bg-white top-0 left-0 right-0 z-10 lg:pt-4 md:pt-4">
       <div className="px-0">
         <div className="flex flex-col gap-1 lg:flex lg:justify-between lg:flex-row">
           {/* Logo Container */}
@@ -40,7 +42,7 @@ function Navbar() {
               />
             </div>
             {/*  Logo */}
-            <Link to="/" className="flex justify-between items-center gap-1 cursor-pointer">
+            <Link to="/" className="flex justify-between items-center gap-3 cursor-pointer sm:gap-2">
               {/* <FaFire
                 size={30}
                 className="text-white rounded-full bg-gradient-to-r  from-orange-400 to-red-400"
@@ -102,14 +104,14 @@ function Navbar() {
             className="absolute right-4 top-4 cursor-pointer "
           />
           <div className="flex  items-center flex-row p-5 gap-1">
-            <FaFire
+            <img src={process.env.PUBLIC_URL + '/Restau_logo.png'} style={{ marginTop: '10px', width: '50px', height: 'auto' }} alt="Restau Logo" />
+            <span className="text-2xl italic font-bold text-black">My Restaurant</span>
+            {/* <FaFire
               size={30}
               className="text-white rounded-full bg-gradient-to-r  from-orange-400 to-red-400"
-            />
-            <img src={tastylogo} style={{ marginTop: '10px', width: '50px', height: 'auto' }} alt="Tastyy Logo" />
-
-
+            /> */}
           </div>
+          {/* Add here a profile Icon */}
           <nav>
             <ul className="flex flex-col p-4 ">
               <Link to="/"><li
@@ -143,6 +145,24 @@ function Navbar() {
                     <MdCategory size={25} className="mr-4" /> Categories
                   </div>
                 </li>
+              </Link>
+              <Link to="/contact"><li
+                onClick={() => setNav(!nav)}
+                className="text-xl py-4 px-5 flex cursor-pointer hover:bg-orange-300 hover:rounded-sm"
+              >
+                <div className="flex justify-between items-center ">
+                  <AiFillMessage size={25} className="mr-4 " /> Contact Us
+                </div>
+              </li>
+              </Link>
+              <Link to="/login"><li
+                onClick={() => setNav(!nav)}
+                className="text-xl py-4 px-5 flex cursor-pointer hover:bg-orange-300 hover:rounded-sm"
+              >
+                <div className="flex justify-between items-center ">
+                  <AiOutlineLogin size={25} className="mr-4 " /> Login/Signup
+                </div>
+              </li>
               </Link>
             </ul>
           </nav>
