@@ -22,7 +22,7 @@ function ContactUsForm() {
         e.preventDefault();
 
         try {
-            const response = await axios.post(`http://localhost:5000/api/contact-us/submit`, formData);
+            const response = await axios.post(`https://ecommerce-restaurant-app-n4n7.vercel.app/api/contact-us/submit`, formData);
 
             if (response.status === 201) {
                 toast.success('Message submitted successfully', {

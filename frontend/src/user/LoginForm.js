@@ -14,7 +14,7 @@ const LoginForm = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post(`http://localhost:5000/api/auth/signin`, {
+            const response = await axios.post(`https://ecommerce-restaurant-app-n4n7.vercel.app/api/auth/signin`, {
                 email,
                 password
             });
